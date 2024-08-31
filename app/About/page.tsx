@@ -48,8 +48,8 @@ export default function About() {
       <div className="about-header">
         <div className="about-context">
           <p className="text-xl">
-            I'm a <span className="poppins-semibold">Magna Cum Laude</span> Graduate from{" "}
-            <span className="poppins-semibold">Mapua University</span> with a bachelor's degree in{" "}
+            I&apos;m a <span className="poppins-semibold">Magna Cum Laude</span> Graduate from{" "}
+            <span className="poppins-semibold">Mapua University</span> with a bachelor&apos;s degree in{" "}
             <span className="poppins-semibold">Information Technology</span> majoring in{" "}
             <span className="poppins-semibold">Application Development</span>.
           </p>
@@ -81,7 +81,7 @@ export default function About() {
           <br />
 
           <p className="text-xl">
-            If you are interested in hiring me, here's my{" "}
+            If you are interested in hiring me, here&apos;s my{" "}
             <a href="/cv.pdf" download="CV-Abrenica" style={{ textDecoration: "underline", color: "inherit" }}>
               resume
             </a>.

@@ -9,7 +9,7 @@ export default function Contact() {
         <div className="line"></div>
       </div>
 
-<p className="text-2xl sub">Reach out, and let's make things happen!</p>
+<p className="text-2xl sub">Reach out, and let&apos;s make things happen!</p>
 <br></br>
 <p className="text-2xl sub">You may send me an <a style={{textDecoration:"underline", fontWeight:"500"}} href="mailto:abrenica.y@gmail.com">email.</a></p>
 <br></br>
