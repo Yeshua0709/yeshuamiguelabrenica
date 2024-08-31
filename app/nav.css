@@ -1,0 +1,50 @@
+.header{
+    width: 100%;
+}
+
+
+.header-container{
+    max-width: 1000px;
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-top: 5em;
+   
+}
+
+.name{
+    width: 33%;
+    margin-top: -1.5em;
+   
+}
+
+.nav{
+    width: 33%;
+   
+}
+
+.social-media{
+    width: 33%;
+    display: flex;
+    justify-content:flex-end;
+}
+.social-media .links{
+    margin-left: 1em;
+}
+
+.nav ul {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+
+
+.links svg{
+    color:gray;
+}
+
+
+.role{
+    color:#747474;
+}
+
