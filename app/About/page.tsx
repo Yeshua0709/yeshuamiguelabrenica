@@ -104,7 +104,11 @@ export default function About() {
       <h1 className="timeline-header mb-20"><p className="text-3xl">My journey as a developer so far...</p></h1>
       <ul className="timeline-list">
         {timelineData.map((item, index) => (
-          <li key={index} className="timeline-item" style={{ "--accent-color": item.accentColor }}>
+          <li 
+          key={index} 
+          className="timeline-item" 
+          style={{ "--accent-color": item.accentColor } as React.CSSProperties}
+        >
             <div className="timeline-date">{item.year}</div>
             <div className="timeline-title">{item.title}</div>
             <div className="timeline-descr">{item.description}</div>

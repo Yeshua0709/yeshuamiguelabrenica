@@ -964,3 +964,13 @@ margin-bottom: 1em;
     font-size: 1em;
   }
 }
+
+
+/* styles.css */
+.timeline-item {
+  --accent-color: #3498db; /* Default color */
+}
+
+.timeline-item[data-accent-color] {
+  --accent-color: var(--accent-color);
+}
