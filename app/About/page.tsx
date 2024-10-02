@@ -90,7 +90,7 @@ export default function About() {
 
           <p className="text-xl"  data-aos="fade-right" data-aos-duration="3000">
             If you are interested in hiring me, here&apos;s my{" "}
-            <a href="/cv.pdf" download="CV-Abrenica" style={{ textDecoration: "underline", color: "inherit" }}>
+            <a href="/resume.pdf" download="Resume-Abrenica" style={{ textDecoration: "underline", color: "inherit" }}>
               resume
             </a>.
           </p>
