@@ -4,7 +4,15 @@ import Image from "next/image";
 import Link from "next/link";
 import { Typewriter } from "react-simple-typewriter";
 
+import { useState, useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 export default function About() {
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
 
   const timelineData = [
     {
@@ -46,8 +54,8 @@ export default function About() {
       </div>
 
       <div className="about-header">
-        <div className="about-context">
-          <p className="text-xl">
+        <div className="about-context" data-aos="fade-right" data-aos-duration="1000">
+          <p className="text-xl"  data-aos="fade-right" data-aos-duration="1500">
             I&apos;m a <span className="poppins-semibold">Magna Cum Laude</span> Graduate from{" "}
             <span className="poppins-semibold">Mapua University</span> with a bachelor&apos;s degree in{" "}
             <span className="poppins-semibold">Information Technology</span> majoring in{" "}
@@ -56,14 +64,14 @@ export default function About() {
 
           <br />
 
-          <p className="text-xl">
-            I like to build stuff that makes the <span className="poppins-semibold">world</span> a{" "}
+          <p className="text-xl"  data-aos="fade-right" data-aos-duration="2000">
+            I like to build solutions that make the <span className="poppins-semibold">world</span> a{" "}
             <span className="poppins-semibold">better place.</span>
           </p>
 
           <br />
 
-          <p className="text-xl">
+          <p className="text-xl"  data-aos="fade-right" data-aos-duration="2500">
             Aside from programming, I also do{" "}
             <span style={{ color: "gray", textDecoration: "underline", fontWeight: "500" }}>
               <Typewriter
@@ -80,7 +88,7 @@ export default function About() {
 
           <br />
 
-          <p className="text-xl">
+          <p className="text-xl"  data-aos="fade-right" data-aos-duration="3000">
             If you are interested in hiring me, here&apos;s my{" "}
             <a href="/cv.pdf" download="CV-Abrenica" style={{ textDecoration: "underline", color: "inherit" }}>
               resume
@@ -88,7 +96,7 @@ export default function About() {
           </p>
         </div>
 
-        <div className="about-img">
+        <div className="about-img"  data-aos="fade-left" data-aos-duration="1000">
           <Image
             src="/images/about-banner.jpg"
             alt="about-banner"
@@ -103,18 +111,19 @@ export default function About() {
       <div className="timeline-container mt-40">
       <h1 className="timeline-header mb-20"><p className="text-3xl">My journey as a developer so far...</p></h1>
       <ul className="timeline-list">
-        {timelineData.map((item, index) => (
-          <li 
-          key={index} 
-          className="timeline-item" 
-          style={{ "--accent-color": item.accentColor } as React.CSSProperties}
-        >
-            <div className="timeline-date">{item.year}</div>
-            <div className="timeline-title">{item.title}</div>
-            <div className="timeline-descr">{item.description}</div>
-          </li>
-        ))}
-      </ul>
+  {timelineData.map((item, index) => (
+    <li 
+      key={index} 
+      className="timeline-item" 
+      data-aos={index % 2 === 0 ? "flip-right" : "flip-left"}
+      style={{ "--accent-color": item.accentColor } as React.CSSProperties}
+    >
+      <div className="timeline-date">{item.year}</div>
+      <div className="timeline-title">{item.title}</div>
+      <div className="timeline-descr">{item.description}</div>
+    </li>
+  ))}
+</ul>
       
     </div>
      

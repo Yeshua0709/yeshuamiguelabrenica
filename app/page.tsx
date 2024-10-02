@@ -1,7 +1,19 @@
+'use client';
+
 import Image from "next/image";
 import "./globals.css";
 import Link from "next/link";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+import { useEffect } from "react";
+
+
 export default function Home() {
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   return (
    
     <div className="">
@@ -13,13 +25,13 @@ export default function Home() {
 
         <div className="banner-text">
 
-        <p className="text-3xl pb-2 title"> <b className="poppins-semibold title">Magna Cum Laude</b> Graduate</p>
-        <p className="text-2xl">Mapua University</p>
-        <br></br>
-        <p className="text-lg">A 22-year old <b className="poppins-medium">developer</b> based in Manila, Philippines</p>
+        <p className="text-3xl pb-2 title" data-aos="fade-right"> <b className="poppins-semibold title">Magna Cum Laude</b> Graduate</p>
+        <p className="text-2xl" data-aos="fade-right"data-aos-duration="1500">Mapua University</p>
+        <br></br> 
+        <p className="text-lg"  data-aos="fade-right"data-aos-duration="2000" >A 22-year old <b className="poppins-medium">developer</b> based in Manila, Philippines</p>
         <br></br>
 
-        <a href="mailto:abrenica.y@gmail.com" className="connect-btn">
+        <a href="mailto:abrenica.y@gmail.com" className="connect-btn" data-aos="fade-right"data-aos-duration="2500">
         
         <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="white" className="bi bi-arrow-right-short" viewBox="0 0 16 16">
   <path fillRule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
@@ -29,7 +41,7 @@ export default function Home() {
         </div>
 
 
-      <div className="banner-img">
+      <div className="banner-img" >
       <Image
               src="/images/image-banner.png"
               alt="My Image"
@@ -45,9 +57,9 @@ export default function Home() {
 
 <div className="techstack-main">
 <div className="techstack">
-<div className="title poppins-medium">My Techstack</div>
+<div className="title poppins-medium" data-aos="zoom-out-up">My Techstack</div>
 
-<div className="techstack-container">
+<div className="techstack-container" data-aos="zoom-out-up" data-aos-duration="1500">
 <Image
               src="/images/techstack/1.png"
               alt="My Image"
@@ -133,9 +145,9 @@ export default function Home() {
 
 <div className="techstack-main">
 <div className="techstack">
-<div className="title poppins-medium">My Other Tools</div>
+<div className="title poppins-medium" data-aos="zoom-out-up">My Other Tools</div>
 
-<div className="techstack-container">
+<div className="techstack-container"  data-aos="zoom-out-up" data-aos-duration="1500">
 <Image
               src="/images/techstack/12.png"
               alt="My Image"
@@ -188,7 +200,7 @@ export default function Home() {
 
   <div className="mockups-header">
   <p className="title poppins-medium text-5xl">Projects I’ve worked on</p>
-  <Link href="/Projects" className="view-btn"> 
+  <Link href="/Projects" className="view-btn"  > 
   <svg  xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" className="bi bi-arrow-right-short view-logo" viewBox="0 0 16 16">
   <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
 </svg>
@@ -197,9 +209,9 @@ export default function Home() {
   </div>
 
 
-<div className="mockups-container">
+<div className="mockups-container" >
 
-  <div className="left">
+  <div className="left" data-aos="fade-up-right">
  
     <p className="text-xl poppins-medium">Anapolo - Spaced Repetition Software</p>
   <Image
@@ -213,7 +225,7 @@ export default function Home() {
   </div>
 
   <div className="right">
-    <div className="right-window mb-4">
+    <div className="right-window mb-4" data-aos="fade-down-left">
     <p className="text-base poppins-medium">TransUnion Project Tracker</p>
     <Image
               src="/images/mockups/project tracker.png"
@@ -224,7 +236,7 @@ export default function Home() {
             />
 
     </div>
-    <div className="right-window">
+    <div className="right-window" data-aos="fade-up-left">
     <span className="text-base poppins-medium">Social Media Planner</span>
     <Image
               src="/images/mockups/social media planner.png"

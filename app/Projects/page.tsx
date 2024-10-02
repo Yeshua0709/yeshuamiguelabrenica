@@ -1,9 +1,17 @@
 "use client";
 
 import Image from "next/image";
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import AOS from 'aos';
+import 'aos/dist/aos.css';
+
 
 export default function Projects() {
+
+  useEffect(() => {
+    AOS.init({ duration: 1000 });
+  }, []);
+
   const [projects, setProjects] = useState([
     {
       id: 4,
@@ -93,7 +101,7 @@ export default function Projects() {
         </div>
         {projects.map((project) => (
           <div className="project-window mb-10" key={project.id}>
-            <div className="project-context mr-5">
+            <div className="project-context mr-5" data-aos="fade-down-right" data-aos-duration="1500">
               <div className="project-header">
                 <p className="poppins-medium text-xl">{project.title}</p>
                 <p>{project.date}</p>
@@ -105,7 +113,7 @@ export default function Projects() {
               </div>
               <p className="project_description text-xs mt-3">{project.description}</p>
             </div>
-            <div className="project-mock">
+            <div className="project-mock" data-aos="fade-down-left" data-aos-duration="1500">
               <Image
                 src={project.image}
                 alt={project.title + "_img"}
