@@ -22,7 +22,7 @@ export default function Projects() {
       techstacks: [
         "HTML","CSS","JavaScript","React","TailWind"
       ],
-      link:"/"
+      link:"https://hidalgo-nft-official.pages.dev/"
     },
     {
       id: 1,
@@ -36,37 +36,15 @@ export default function Projects() {
       link:"http://anapolothesis.wuaze.com/"
     },
     {
-      id: 3,
-      title: "Anabu Clinic Appointment System and Patient Management System",
-      image: "/images/mockups/anabu.png",
-      description: "It's common for barangays to still use manual methods when it comes to everything. This project was a refresher for me, so I went to them and said, 'Hey, I'll create an application for your clinic, for free. Just let me do this!'",
-      date: "July 2023",
+      id: 2,
+      title: "Control History",
+      image: "/images/mockups/1.png",
+      description: "This is my very first Chrome extension application. The main purpose of the application (based on my client), is to hide his porn history, totally from his browser, even if he visits those sites in the future. Google should be scared of what I'm capable of. They should hire me. Really. (Google Developer Documentation is the worst).",
+      date: "December 2023",
       techstacks: [
-        "HTML","CSS","JavaScript","PHP","MySQL"
+        "HTML","CSS","JavaScript","NodeJS","MongoDB", "PayPal"
       ],
-      link:"/"
-    },
-    {
-      id: 5,
-      title: "TransUnion Image Corp Transition Project Tracker",
-      image: "/images/mockups/project tracker.png",
-      description: "When I had my internship with TransUnion, I was assigned to the infrastructure department, so no dev stuff there. But luckily, I was assigned to an ongoing project involving inventory management and project management, so I did this application haha!",
-      date: "July 2024",
-      techstacks: [
-        "HTML","CSS","JavaScript","PHP","MySQL"
-      ],
-      link:"/"
-    },
-    {
-      id: 6,
-      title: "MGHS Social Media Posting Planner",
-      image: "/images/mockups/social media planner.png",
-      description: "This project is dedicated to a friend of mine. I created this for him and asked him if I can add this to my portfolio. He didn't answer. I took that as a yes :). One of his tasks was to monitor and manage posts of companies assigned to him, so... He wanted to please his manager, so I added an admin side that creates reports. This app is also amazing!",
-      date: "July 2024",
-      techstacks: [
-        "HTML","CSS","JavaScript","PHP","MySQL"
-      ],
-      link:"/"
+      link:"https://chromewebstore.google.com/detail/control-history/jjnfnjihahafmfncpholikbckebepcji?hl=en&pli=1"
     },
     {
       id: 7,
@@ -77,19 +55,44 @@ export default function Projects() {
       techstacks: [
         "Adalo","PayPal","Zapier"
       ],
-      link:"/"
+      link:"https://davids-team-305.adalo.com/"
     },
     {
-      id: 2,
-      title: "Control History",
-      image: "/images/mockups/1.png",
-      description: "This is my very first Chrome extension application. The main purpose of the application (based on my client), is to hide his porn history, totally from his browser, even if he visits those sites in the future. Google should be scared of what I'm capable of. They should hire me. Really. (Google Developer Documentation is the worst).",
-      date: "December 2023",
+      id: 6,
+      title: "MGHS Social Media Posting Planner",
+      image: "/images/mockups/social media planner.png",
+      description: "This project is dedicated to a friend of mine. I created this for him and asked him if I can add this to my portfolio. He didn't answer. I took that as a yes :). One of his tasks was to monitor and manage posts of companies assigned to him, so... He wanted to please his manager, so I added an admin side that creates reports. This app is also amazing!",
+      date: "July 2024",
       techstacks: [
-        "HTML","CSS","JavaScript","NodeJS","MongoDB", "PayPal"
+        "HTML","CSS","JavaScript","PHP","MySQL"
       ],
-      link:"/"
+      link:"http://social-medial-planner.infinityfreeapp.com/"
     },
+    {
+      id: 3,
+      title: "Anabu Clinic Appointment System and Patient Management System",
+      image: "/images/mockups/anabu.png",
+      description: "It's common for barangays to still use manual methods when it comes to everything. This project was a refresher for me, so I went to them and said, 'Hey, I'll create an application for your clinic, for free. Just let me do this!'",
+      date: "July 2023",
+      techstacks: [
+        "HTML","CSS","JavaScript","PHP","MySQL"
+      ],
+      link:""
+    },
+    {
+      id: 5,
+      title: "TransUnion Image Corp Transition Project Tracker",
+      image: "/images/mockups/project tracker.png",
+      description: "When I had my internship with TransUnion, I was assigned to the infrastructure department, so no dev stuff there. But luckily, I was assigned to an ongoing project involving inventory management and project management, so I did this application haha!",
+      date: "July 2024",
+      techstacks: [
+        "HTML","CSS","JavaScript","PHP","MySQL"
+      ],
+      link:"#"
+    },
+    
+  
+   
   ]);
 
   return (
@@ -114,13 +117,13 @@ export default function Projects() {
               <p className="project_description text-xs mt-3">{project.description}</p>
             </div>
             <div className="project-mock" data-aos="fade-down-left" data-aos-duration="1500">
-              <Image
+             <a href={project.link} target="_blank"> <Image
                 src={project.image}
                 alt={project.title + "_img"}
                 width={1000}
                 height={1000}
                 className="mock-img mt-10"
-              />
+              /></a>
             </div>
           </div>
         ))}
