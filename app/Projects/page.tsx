@@ -47,6 +47,17 @@ export default function Projects() {
       link:"https://chromewebstore.google.com/detail/control-history/jjnfnjihahafmfncpholikbckebepcji?hl=en&pli=1"
     },
     {
+      id: 8,
+      title: "Bankist",
+      image: "/images/mockups/bankist.png",
+      description: "Bankist is a single-page application created to simulate a banking application.This application utilizes state management only and does not use any database. Did this as a refresher. :)",
+      date: "November 2024",
+      techstacks: [
+        "HTML","CSS","JavaScript","React","TailWind"
+      ],
+      link:"https://my-bankistv2.netlify.app"
+    },
+    {
       id: 7,
       title: "Interview Letter Creator",
       image: "/images/mockups/interviewlettercreator.png",
