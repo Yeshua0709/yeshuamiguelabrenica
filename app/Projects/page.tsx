@@ -5,12 +5,18 @@ import { useState, useEffect } from "react";
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-
 export default function Projects() {
+  const [loading, setLoading] = useState(true); // Track loading state
 
+  // Initialize AOS (animation library)
   useEffect(() => {
     AOS.init({ duration: 1000 });
   }, []);
+
+  // Function to handle image loading completion
+  const handleImageLoad = () => {
+    setLoading(false); // Set loading to false when images have loaded
+  };
 
   const [projects, setProjects] = useState([
     {
@@ -109,10 +115,19 @@ export default function Projects() {
   return (
     <div className="">
       <div className="projects-container">
+        {/* Show loader until everything is loaded */}
+        {loading && (
+          <div className="loader">
+            {/* This can be a spinner or any loader of your choice */}
+            <div className="spinner"></div>
+          </div>
+        )}
+        
         <div className="title-container">
           <p className="title poppins-medium text-5xl mb-20 proj-title">My Projects</p>
           <div className="line"></div>
         </div>
+
         {projects.map((project) => (
           <div className="project-window mb-10" key={project.id}>
             <div className="project-context mr-5" data-aos="fade-down-right" data-aos-duration="1500">
@@ -128,13 +143,16 @@ export default function Projects() {
               <p className="project_description text-xs mt-3">{project.description}</p>
             </div>
             <div className="project-mock" data-aos="fade-down-left" data-aos-duration="1500">
-             <a href={project.link} target="_blank"> <Image
-                src={project.image}
-                alt={project.title + "_img"}
-                width={1000}
-                height={1000}
-                className="mock-img mt-10"
-              /></a>
+              <a href={project.link} target="_blank" rel="noopener noreferrer">
+                <Image
+                  src={project.image}
+                  alt={project.title + "_img"}
+                  width={1000}
+                  height={1000}
+                  className="mock-img mt-10"
+                  onLoadingComplete={handleImageLoad} // Trigger when the image has finished loading
+                />
+              </a>
             </div>
           </div>
         ))}
@@ -142,3 +160,20 @@ export default function Projects() {
     </div>
   );
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
